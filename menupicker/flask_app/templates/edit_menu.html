@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>edit sighting</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1>edit</h1>
+    <h1 class="text-right">{{user.first_name}}!!!</h1>
+    <div class="text-right">
+      <a href="/dashboard" class="btn btn-primary">dashboard</a>
+      <a href="/logout" class="btn btn-info">Logout</a>
+    </div>
+    </nav>
+    <form
+      action="/update/menu"
+      method="post"
+      class="col-11 p-4 my-4 bg-dark text-light mx-auto"
+    >
+      <h2 class="text-primary">edit menu</h2>
+      {% with messages = get_flashed_messages(category_filter=['menu']) %}
+      {% if messages %}
+      <div class="alert alert-danger" role="alert">
+        <strong>GEIKA GEIKA</strong>
+        {% for message in messages %}
+        <p>{{message}}</p>
+        {% endfor %}
+      </div>
+      {% endif %} {% endwith %}
+
+      <div class="d-flex justify-content-between col-9 flex-wrap">
+        <input type="hidden" name="id" value={{edit.id}}>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="name">name:</label>
+            <textarea
+              name="name"
+              cols="30"
+              rows="5"
+              class="form-control"
+            >{{edit.name}}</textarea>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="option1">question1:</label>
+            <textarea
+              name="option1"
+              cols="30"
+              rows="5"
+              class="form-control"
+            >{{edit.option1}}</textarea>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="option2">question2:</label>
+            <textarea
+              name="option2"
+              cols="30"
+              rows="5"
+              class="form-control"
+            >{{edit.option2}}</textarea>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="option3">question3:</label>
+            <textarea
+              name="option3"
+              cols="30"
+              rows="5"
+              class="form-control"
+            >{{edit.option3}}</textarea>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="option4">question4:</label>
+            <textarea
+              name="option4"
+              cols="30"
+              rows="5"
+              class="form-control"
+            >{{edit.option4}}</textarea>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="option5">question5:</label>
+            <textarea
+              name="option5"
+              cols="30"
+              rows="5"
+              class="form-control"
+            >{{edit.option5}}</textarea>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="option6">option6:</label>
+            <textarea
+              name="option6"
+              cols="30"
+              rows="5"
+              class="form-control"
+            >{{edit.option6}}</textarea>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="option7">option7:</label>
+            <textarea
+              name="option7"
+              cols="30"
+              rows="5"
+              class="form-control"
+            >{{edit.option7}}</textarea>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="option8">option8:</label>
+            <textarea
+              name="option8"
+              cols="30"
+              rows="5"
+              class="form-control"
+            >{{edit.option8}}</textarea>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="option9">option9:</label>
+            <textarea
+              name="option9"
+              cols="30"
+              rows="5"
+              class="form-control"
+            >{{edit.option9}}</textarea>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="option10">option10:</label>
+            <textarea
+              name="option10"
+              cols="30"
+              rows="5"
+              class="form-control"
+            >{{edit.option10}}</textarea>
+          </div>
+        </div>
+      </div><br />
+          <input type="submit" value="Update" class="btn btn-primary" />
+    </form>
+  </body>
+</html>

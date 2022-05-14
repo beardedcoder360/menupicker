@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form
+      action="/answer/survey"
+      method="post"
+      class="col-11 p-4 my-4 bg-dark text-light mx-auto"
+    >
+      {% for survey in surveys %}
+      <div>
+        choose:
+        <div class="form-group">
+          <input
+            type="radio"
+            id="answer1"
+            name="answer1"
+            form="answer1"
+            value="{{survey.option1}}"
+            class="form-control"
+          />
+          <label for="{{survey.option1}}">{{survey.option1}}</label>
+        </div>
+        <div class="form-group">
+          <input
+            type="radio"
+            id="answer1"
+            name="answer1"
+            form="answer1"
+            value="{{survey.option2}}"
+            class="form-control"
+          />
+          <label for="{{survey.option2}}">{{survey.option2}}</label>
+        </div>
+      </div>
+      <div>
+        choose:
+        <div class="form-grou[">
+          <input
+            type="radio"
+            id="answer2"
+            name="answer2"
+            form="answer2"
+            value="{{survey.option3}}"
+            class="form-control"
+          />
+          <label for="{{survey.option3}}">{{survey.option3}}</label>
+        </div>
+        <div class="form-group">
+          <input
+            type="radio"
+            id="answer2"
+            name="answer2"
+            form="answer2"
+            value="{{survey.option3}}"
+            class="form-control"
+          />
+          <label for="{{survey.option4}}">{{survey.option4}}</label>
+        </div>
+      </div>
+      <div>
+        choose:
+        <div class="form-group">
+          <input
+            type="radio"
+            id="answer3"
+            name="answer3"
+            form="answer3"
+            value="{{survey.option5}}"
+            class="form-control"
+          />
+          <label for="{{survey.option5}}">{{survey.option5}}</label>
+        </div>
+        <div class="form-group">
+          <input
+            type="radio"
+            id="answer3"
+            name="answer3"
+            form="answer3"
+            value="{{survey.option6}}"
+            class="form-control"
+          />
+          <label for="{{survey.option6}}">{{survey.option6}}</label>
+        </div>
+      </div>
+      <div>
+        choose:
+        <div class="form-group">
+          <input
+            type="radio"
+            id="answer4"
+            name="answer4"
+            form="answer4"
+            value="{{survey.option7}}"
+            class="form-control"
+          />
+          <label for="{{survey.option7}}">{{survey.option7}}</label>
+        </div>
+        <div class="form-group">
+          <input
+            type="radio"
+            id="answer4"
+            name="answer4"
+            form="answer4"
+            value="{{survey.option8}}"
+            class="form-control"
+          />
+          <label for="{{survey.option8}}">{{survey.option8}}</label>
+        </div>
+      </div>
+      <div>
+        choose:
+        <div class="form-group">
+          <input
+            type="radio"
+            id="answer5"
+            name="answer5"
+            form="answer5"
+            value="{{survey.option9}}"
+            class="form-control"
+          />
+          <label for="{{survey.option1}}">{{survey.option9}}</label>
+        </div>
+        <div class="form-group">
+          <input
+            type="radio"
+            id="answer5"
+            name="answer5"
+            form="answer5"
+            value="{{survey.option10}}"
+            class="form-control"
+          />
+          <label for="{{survey.option10}}">{{survey.option10}}</label>
+        </div>
+        <input type="submit" value="Submit" class="btn btn-primary" />
+      </div>
+      {% endfor %}
+    </form>
+  </body>
+</html>
